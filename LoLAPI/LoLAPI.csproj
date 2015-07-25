@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8ED5243-C8C9-4D30-834C-1411C505CB38}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LoLAPI</RootNamespace>
+    <AssemblyName>LoLAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APIUtil.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="DataDragon\DDragonScraper.cs" />
+    <Compile Include="JsonUtil.cs" />
+    <Compile Include="Platform.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="Structures\Champion\ChampionDto.cs" />
+    <Compile Include="Structures\Champion\ChampionListDto.cs" />
+    <Compile Include="Structures\GameMode.cs" />
+    <Compile Include="Structures\GameSubType.cs" />
+    <Compile Include="Structures\GameType.cs" />
+    <Compile Include="Structures\Game\GameDto.cs" />
+    <Compile Include="Structures\Game\PlayerDto.cs" />
+    <Compile Include="Structures\Game\RawStatsDto.cs" />
+    <Compile Include="Structures\Game\RecentGamesDto.cs" />
+    <Compile Include="Structures\League\LeagueDto.cs" />
+    <Compile Include="Structures\League\LeagueEntryDto.cs" />
+    <Compile Include="Structures\League\LeagueQueue.cs" />
+    <Compile Include="Structures\League\LeagueTier.cs" />
+    <Compile Include="Structures\League\MiniSeriesDto.cs" />
+    <Compile Include="Structures\Observation\BannedChampion.cs" />
+    <Compile Include="Structures\Observation\CurrentGame\CurrentGameInfo.cs" />
+    <Compile Include="Structures\Observation\CurrentGame\CurrentGameParticipant.cs" />
+    <Compile Include="Structures\Observation\FeaturedGame\FeaturedGameInfo.cs" />
+    <Compile Include="Structures\Observation\FeaturedGame\FeaturedGames.cs" />
+    <Compile Include="Structures\Observation\FeaturedGame\Participant.cs" />
+    <Compile Include="Structures\Observation\Mastery.cs" />
+    <Compile Include="Structures\Observation\Match\AscendedType.cs" />
+    <Compile Include="Structures\Observation\Match\Event.cs" />
+    <Compile Include="Structures\Observation\Match\EventType.cs" />
+    <Compile Include="Structures\Observation\Match\Frame.cs" />
+    <Compile Include="Structures\Observation\Match\History\MatchSummary.cs" />
+    <Compile Include="Structures\Observation\Match\History\PlayerHistory.cs" />
+    <Compile Include="Structures\Observation\Match\LeagueTier.cs" />
+    <Compile Include="Structures\Observation\Match\MatchDetail.cs" />
+    <Compile Include="Structures\Observation\Match\Participant.cs" />
+    <Compile Include="Structures\Observation\Match\ParticipantFrame.cs" />
+    <Compile Include="Structures\Observation\Match\ParticipantIdentity.cs" />
+    <Compile Include="Structures\Observation\Match\ParticipantStats.cs" />
+    <Compile Include="Structures\Observation\Match\ParticipantTimeline.cs" />
+    <Compile Include="Structures\Observation\Match\ParticipantTimelineData.cs" />
+    <Compile Include="Structures\Observation\Match\Player.cs" />
+    <Compile Include="Structures\Observation\Match\Season.cs" />
+    <Compile Include="Structures\Observation\Match\Team.cs" />
+    <Compile Include="Structures\Observation\Match\Timeline.cs" />
+    <Compile Include="Structures\Observation\Observer.cs" />
+    <Compile Include="Structures\Observation\Rune.cs" />
+    <Compile Include="Structures\Position.cs" />
+    <Compile Include="Structures\Static\BasicDataDto.cs" />
+    <Compile Include="Structures\Static\BasicDataStatsDto.cs" />
+    <Compile Include="Structures\Static\Champion\BlockDto.cs" />
+    <Compile Include="Structures\Static\Champion\BlockItemDto.cs" />
+    <Compile Include="Structures\Static\Champion\ChampionDto.cs" />
+    <Compile Include="Structures\Static\Champion\ChampionListDto.cs" />
+    <Compile Include="Structures\Static\Champion\ChampionSpellDto.cs" />
+    <Compile Include="Structures\Static\Champion\InfoDto.cs" />
+    <Compile Include="Structures\Static\Champion\PassiveDto.cs" />
+    <Compile Include="Structures\Static\Champion\RecommendedDto.cs" />
+    <Compile Include="Structures\Static\Champion\SkinDto.cs" />
+    <Compile Include="Structures\Static\Champion\StatsDto.cs" />
+    <Compile Include="Structures\Static\GoldDto.cs" />
+    <Compile Include="Structures\Static\ImageDto.cs" />
+    <Compile Include="Structures\Static\Item\GroupDto.cs" />
+    <Compile Include="Structures\Static\Item\ItemDto.cs" />
+    <Compile Include="Structures\Static\Item\ItemListDto.cs" />
+    <Compile Include="Structures\Static\Item\ItemTreeDto.cs" />
+    <Compile Include="Structures\Static\LevelTipDto.cs" />
+    <Compile Include="Structures\Static\Map\MapDataDto.cs" />
+    <Compile Include="Structures\Static\Map\MapDetailsDto.cs" />
+    <Compile Include="Structures\Static\Mastery\MasteryDto.cs" />
+    <Compile Include="Structures\Static\Mastery\MasteryListDto.cs" />
+    <Compile Include="Structures\Static\Mastery\MasteryTree.cs" />
+    <Compile Include="Structures\Static\Mastery\MasteryTreeDto.cs" />
+    <Compile Include="Structures\Static\Mastery\MasteryTreeItemDto.cs" />
+    <Compile Include="Structures\Static\Mastery\MasteryTreeListDto.cs" />
+    <Compile Include="Structures\Static\MetaDataDto.cs" />
+    <Compile Include="Structures\Static\Realm\RealmDto.cs" />
+    <Compile Include="Structures\Static\Rune\RuneDto.cs" />
+    <Compile Include="Structures\Static\Rune\RuneListDto.cs" />
+    <Compile Include="Structures\Static\SpellVarsDto.cs" />
+    <Compile Include="Structures\Static\Spell\SummonerSpellDto.cs" />
+    <Compile Include="Structures\Static\Spell\SummonerSpellListDto.cs" />
+    <Compile Include="Structures\Static\String\LanguageStringsDto.cs" />
+    <Compile Include="Structures\Stats\AggregatedStatsDto.cs" />
+    <Compile Include="Structures\Stats\Ranked\ChampionStatsDto.cs" />
+    <Compile Include="Structures\Stats\Ranked\RankedStatsDto.cs" />
+    <Compile Include="Structures\Stats\Season.cs" />
+    <Compile Include="Structures\Stats\Summary\PlayerStatsSummaryDto.cs" />
+    <Compile Include="Structures\Stats\Summary\PlayerStatsSummaryListDto.cs" />
+    <Compile Include="Structures\Stats\Summary\PlayerStatSummaryType.cs" />
+    <Compile Include="Structures\Status\Incident.cs" />
+    <Compile Include="Structures\Status\Message.cs" />
+    <Compile Include="Structures\Status\Service.cs" />
+    <Compile Include="Structures\Status\Severity.cs" />
+    <Compile Include="Structures\Status\Shard.cs" />
+    <Compile Include="Structures\Status\ShardStatus.cs" />
+    <Compile Include="Structures\Status\Status.cs" />
+    <Compile Include="Structures\Status\Translation.cs" />
+    <Compile Include="Structures\Summoner\MasteryDto.cs" />
+    <Compile Include="Structures\Summoner\MasteryPageDto.cs" />
+    <Compile Include="Structures\Summoner\MasteryPagesDto.cs" />
+    <Compile Include="Structures\Summoner\RunePageDto.cs" />
+    <Compile Include="Structures\Summoner\RunePagesDto.cs" />
+    <Compile Include="Structures\Summoner\RuneSlotDto.cs" />
+    <Compile Include="Structures\Summoner\SummonerDto.cs" />
+    <Compile Include="Structures\Team\MatchHistorySummaryDto.cs" />
+    <Compile Include="Structures\Team\RosterDto.cs" />
+    <Compile Include="Structures\Team\TeamDto.cs" />
+    <Compile Include="Structures\Team\TeamMemberInfoDto.cs" />
+    <Compile Include="Structures\Team\TeamStatDetailDto.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
